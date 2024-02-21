@@ -1,0 +1,87 @@
+.home {
+    height: auto;
+    margin-top: 7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+}
+
+.homeFirstPart, .homeSecondPart, .homeThirdPart {
+    width: 75%;
+    margin: 0 auto;
+    display: inherit;
+    flex-direction: inherit;
+    gap: inherit;
+}
+
+.secondHeroSection {
+    width: 100vw;
+    height: 40vh;
+    background: url('/home/abed/Desktop/Senior-Project/Frontend/src/assets/homepage/liberty.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inherit;
+    flex-direction: inherit;
+    justify-content: center;
+}
+
+.secondHeroSectionTitle {
+    font-size: 3.1rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-left: 15rem;
+    width: 25%;
+    color: var(--h1-clr);
+}
+
+.thirdHeroSection {
+    margin-top: 10rem;
+    width: 100vw;
+    height: 40vh;
+    display: flex;
+}
+
+.thirdHeroSectionPartOne, .thirdHeroSectionPartTwo {
+    height: 100%;
+    width: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.thirdHeroSectionPartOne {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/home/abed/Desktop/Senior-Project/Frontend/src/assets/homepage/nature.svg');
+}
+
+.thirdHeroSectionPartTwo  {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/home/abed/Desktop/Senior-Project/Frontend/src/assets/homepage/cities.svg');
+}
+
+.thirdHeroSectionSlogan {
+    color: #FFEFEC;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.thirdHeroSectionTitle {
+    font-size: 3rem;
+    color: #FFEFEC;
+    text-transform: capitalize;
+}
+
+.thirdHeroSectionView {
+    border: 1px solid #FFEFEC;
+    height: 2.8rem;
+    width: 9rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.7rem;
+    color: #FFEFEC;
+    cursor: pointer;
+}

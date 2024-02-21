@@ -1,0 +1,88 @@
+.packagesContainer {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6rem;
+}
+
+.packagesTitle {
+    font-size: 3.2rem;
+    color: var(--h2-clr);
+    font-weight: 550;
+    text-transform: capitalize;
+    width: 30%;
+    text-align: center;
+}
+
+.packages {
+    width: 100%;
+    display: flex;
+    gap: 6rem;
+}
+
+.packageCard {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    position: relative;
+}
+
+.packageCardPartTwo {
+    margin-top: 2.7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.partTwoHeader, .packageLocation {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    color: #7d7d7d;
+    font-size: 1.2rem;
+}
+
+.packageTitle {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.packageCountry {
+    position: absolute;
+    height: 8rem;
+    width: 8rem;
+    top: 17.5rem;
+    left: 1rem;
+}
+
+.packageLocation {
+    gap: 0.2rem;
+}
+
+.packagePrice {
+    color: var(--logo-clr);
+    font-size: 1.5rem;
+    font-weight: 550;
+    margin-top: 0.5rem;
+}
+
+.packageDescription {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-top: 0.5rem;
+}
+
+.packageExplore {
+    width: 30%;
+    padding: 0.8rem;
+    border-radius: 10px;
+    background-color: var(--logo-clr);
+    border: none;
+    color: var(--h1-clr);
+    font-weight: 600;
+    margin-top: 2rem;
+    text-transform: capitalize;
+}

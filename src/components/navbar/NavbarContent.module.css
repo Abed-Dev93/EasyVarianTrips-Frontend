@@ -1,0 +1,30 @@
+.navbar {
+    height: 30%;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    margin-left: 13rem;
+    gap: 17rem;
+}
+
+.navList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 3rem;
+}
+
+.navItem {
+    list-style-type: none;
+    color: var(--h1-clr);
+    cursor: pointer;
+    font-weight: 500;
+    padding: 0.2rem;
+    font-size: 1.1rem;
+    transition: border-bottom 0.3s ease;
+}
+
+.navItem:hover {
+    border-bottom: 3px solid var(--logo-clr);
+}
