@@ -1,0 +1,93 @@
+.headerContainer {
+    width: 100vw;
+    height: 110vh;
+}
+
+.headerPartOne {
+    height: 85%;
+    width: 100%;
+    background: url('/home/abed/Desktop/Senior-Project/Frontend/src/assets/homepage/hero-section.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.headerHeroSection {
+    height: 40%;
+    width: 28%;
+    margin-left: 18rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    color: var(--h1-clr);
+}
+
+.headerHeroSectionTitle {
+    font-size: 3rem;
+    font-weight: 700;
+    height: 90%;
+}
+
+.bookerStatistics {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.membersAvatar {
+    position: relative;
+    width: 25%;
+    height: 3vh;
+}
+
+.membersAvatar img:nth-child(2) {
+    left: 1.1rem;
+}
+.membersAvatar img:nth-child(3) {
+    left: 2.2rem;
+}
+.membersAvatar img:nth-child(4) {
+    left: 3.3rem;
+}
+.membersAvatar img:nth-child(5) {
+    left: 4.4rem;
+}
+.membersAvatar img:nth-child(6) {
+    left: 5.5rem;
+}
+
+.memberAvatar, .memberAvatarAdd {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    border: 2px solid var(--h1-clr);
+    position: absolute;
+}
+
+.memberAvatarAdd {
+    background-color: var(--logo-clr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 6.6rem;
+}
+
+.statisticsDescription {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+.topCompanies {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    background-color: var(--second-bg-clr);
+    height: 15%;
+}
+
+.companyIcon {
+    width: 10rem;
+    height: 3rem;
+}

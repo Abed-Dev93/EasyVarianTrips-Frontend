@@ -1,0 +1,60 @@
+.aboutusPackagesContainer {
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6rem;
+    margin-top: 10rem;
+}
+
+.packagesTitle {
+    font-size: 3.2rem;
+    color: var(--h2-clr);
+    font-weight: 550;
+    text-transform: capitalize;
+    width: 70%;
+    text-align: center;
+}
+
+.aboutusPackages {
+    width: 85vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.packageItem {
+    width: 18%;
+    height: 35vh;
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+.packageItem:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.packagePicture {
+    height: 100%;
+    width: 100%;
+}
+
+.packageLocation, .packagePrice {
+    color: var(--h1-clr);
+    position: absolute;
+    bottom: 1.5rem;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.packageLocation {
+    left: 1.5rem;
+}
+
+.packagePrice {
+    right: 1.5rem;
+}

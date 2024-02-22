@@ -1,15 +1,15 @@
 import React from 'react'
 import style from './Home.module.css'
-import Navbar from '../../layouts/navbar/Navbar'
+import NavbarHome from '../../layouts/navbarHome/NavbarHome'
 import Services from '../../layouts/services/Services'
 import ResortBooking from '../../components/resortBooking/ResortBooking'
-import Sightseeing from '../../layouts/sightseeing/Sightseeing'
+import SightseeingHome from '../../layouts/sightseeingHome/SightseeingHome'
 import Packages from '../../layouts/packages/Packages'
 
 const Home = () => {
   return (
     <>
-      <Navbar />
+      <NavbarHome />
       <main className={style.home}>
         <div className={style.homeFirstPart}>
           <Services />
@@ -19,7 +19,7 @@ const Home = () => {
           <h2 className={style.secondHeroSectionTitle}>let's make your next holiday amazing</h2>
         </section>
         <div className={style.homeSecondPart}>
-          <Sightseeing />
+          <SightseeingHome />
         </div>
         <section className={style.thirdHeroSection}>
           <article className={style.thirdHeroSectionPartOne}>

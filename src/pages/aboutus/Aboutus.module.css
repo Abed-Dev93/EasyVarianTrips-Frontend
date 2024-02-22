@@ -1,0 +1,36 @@
+.aboutus {
+    
+    margin-top: 7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+}
+
+.aboutusFirstPart, .aboutusSecondPart {
+    width: 75%;
+    margin: 0 auto;
+    display: inherit;
+    flex-direction: inherit;
+    gap: inherit;
+}
+
+.secondHeroSection {
+    width: 100vw;
+    height: 40vh;
+    background: url('/home/abed/Desktop/Senior-Project/Frontend/src/assets/aboutus/wanderlust.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inherit;
+    justify-content: center;
+    margin-top: 15rem;
+}
+
+.secondHeroSectionTitle {
+    font-size: 4rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-left: 10rem;
+    margin-top: 9rem;
+    width: 25%;
+    color: var(--h1-clr);
+}
