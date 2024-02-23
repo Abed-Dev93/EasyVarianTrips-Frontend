@@ -11,7 +11,6 @@ const NavbarContent = ({ isLoggedIn, isOnDashboard }) => {
       <ul className={style.navList}>
         <li><NavLink to='/' exact activeclassname={style.active} className={style.navItem}>Home</NavLink></li>
         <li><NavLink to='/aboutus' activeclassname={style.active} className={style.navItem}>About us</NavLink></li>
-        <li><NavLink to='/contactus' activeclassname={style.active} className={style.navItem}>Contact us</NavLink></li>
         <li><NavLink to='/faqs' activeclassname={style.active} className={style.navItem}>FAQs</NavLink></li>
         {
           isLoggedIn ? <li><NavLink to='/login' activeclassname={style.active} className={style.navItem}>Logout</NavLink></li>
