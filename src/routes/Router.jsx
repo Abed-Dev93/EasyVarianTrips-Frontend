@@ -4,7 +4,7 @@ import Home from '../pages/home/Home'
 import Aboutus from '../pages/aboutus/Aboutus'
 import Faqs from '../pages/faqs/Faqs'
 import Login from '../pages/login/Login'
-import Register from '../pages/register/Register'
+import CheckPackages from '../pages/checkPackages/CheckPackages'
 import Layout from './Layout'
 
 const Router = () => {
@@ -14,9 +14,9 @@ const Router = () => {
         <Route path='/' element={<Home />} />
         <Route path='/aboutus' element={<Aboutus />} />
         <Route path='/faqs' element={<Faqs />} />
+        <Route path='/packages' element={<CheckPackages />} />
       </Route>
       <Route path='/login' element={<Login />} />
-      <Route path='/register' element={<Register />} />
     </Routes>
   )
 }

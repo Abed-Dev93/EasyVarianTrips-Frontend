@@ -3,14 +3,15 @@ import style from './NavbarContent.module.css'
 import logoHeader from '../../assets/commons/logo-header.svg'
 import { NavLink } from 'react-router-dom'
 
-const NavbarContent = ({ isLoggedIn, isOnDashboard }) => {
+const NavbarContent = ({ isLoggedIn, isOnDashboard, isOnLoginPage }) => {
   return (
     <>
       { (!isOnDashboard) ? <nav className={style.navbar}>
-      <img src={logoHeader} alt='logo' className={style.logo} />
+      <img src={logoHeader} alt='logo' className={ isOnLoginPage? style.logoHidden : style.logo } />
       <ul className={style.navList}>
         <li><NavLink to='/' exact activeclassname={style.active} className={style.navItem}>Home</NavLink></li>
         <li><NavLink to='/aboutus' activeclassname={style.active} className={style.navItem}>About us</NavLink></li>
+        <li><NavLink to='/packages' activeclassname={style.active} className={style.navItem}>Packages</NavLink></li>
         <li><NavLink to='/faqs' activeclassname={style.active} className={style.navItem}>FAQs</NavLink></li>
         {
           isLoggedIn ? <li><NavLink to='/login' activeclassname={style.active} className={style.navItem}>Logout</NavLink></li>

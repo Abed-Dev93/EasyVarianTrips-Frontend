@@ -1,6 +1,7 @@
 .home {
     height: auto;
     margin-top: 7rem;
+    margin-bottom: 27rem;
     display: flex;
     flex-direction: column;
     gap: 10rem;

@@ -15,14 +15,14 @@ const [isOnDashboard, setIsOnDashboard] = useState(false)
       backspeed: 30,
       showCursor: true
     }
-    const typed = new Typed('.herSectionTitleTyped', options)
+    const typed = new Typed('.heroSectionTitleTyped', options)
   }, [])
 
   return (
     <header className={style.headerContainer}>
         <NavbarContent isOnDashboard={isOnDashboard} isLoggedIn={isLoggedIn} />
         <section className={style.headerHeroSection}>
-          <i><h1 className={`${style.headerHeroSectionTitle} herSectionTitleTyped`}></h1></i>
+          <i><h1 className={`${style.headerHeroSectionTitle} heroSectionTitleTyped`}></h1></i>
         </section>
     </header>
   )

@@ -3,7 +3,7 @@ import style from './Aboutus.module.css'
 import NavbarAboutus from '../../layouts/navbarAboutus/NavbarAboutus'
 import SightseeingAboutus from '../../layouts/sightseeingAboutus/SightseeingAboutus'
 import TripCategories from '../../layouts/tripCategories/TripCategories'
-import PackagesAboutus from '../../layouts/packagesAboutus/PackagesAboutus'
+import Contact from '../../layouts/contact/Contact'
 
 const Aboutus = () => {
   return (
@@ -18,7 +18,7 @@ const Aboutus = () => {
         </section>
         <div className={style.aboutusSecondPart}>
           <TripCategories />
-          <PackagesAboutus />
+          <Contact />
         </div>
       </main>
     </>

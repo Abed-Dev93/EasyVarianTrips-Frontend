@@ -24,9 +24,9 @@ const Footer = () => {
                 <h2 className={style.footerTitle}>platform</h2>
                 <ul className={style.footerLinksList}>
                     <li className={style.footerLinksListItem}>about us</li>
-                    <li className={style.footerLinksListItem}>contact us</li>
                     <li className={style.footerLinksListItem}>FAQs</li>
-                    <li className={style.footerLinksListItem}>pricing</li>
+                    <li className={style.footerLinksListItem}>login</li>
+                    <li className={style.footerLinksListItem}>packages</li>
                 </ul>
             </article>
             <article className={style.footerDestinations}>

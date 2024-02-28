@@ -1,7 +1,7 @@
 import React from 'react'
 import style from './PackagesAboutus.module.css'
 
-const PackagesAboutus = () => {
+const PackagesAboutus = ({ handleClickBackHome }) => {
 
     const array = [
         {
@@ -80,6 +80,7 @@ const PackagesAboutus = () => {
                 ))
             }
         </article>
+        <button className={style.backHomeButton} onClick={handleClickBackHome}>back home</button>
     </section>
   )
 }

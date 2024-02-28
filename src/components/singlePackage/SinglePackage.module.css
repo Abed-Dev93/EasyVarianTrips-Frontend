@@ -1,0 +1,207 @@
+.packageInfo {
+    display: inherit;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 75vw;
+    height: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: -3rem;
+}
+
+.packageSectionHeader {
+    display: inherit;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    background-color: var(--second-bg-clr);
+}
+
+.packageInfoTitle {
+    padding: 2rem;
+    font-size: 1.2rem;
+    color: var(--h3-clr);
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 500;
+    width: 100%;
+}
+
+.singlePackageCheckingContainer {
+    display: flex;
+    width: 100%;
+}
+
+.singlePackageChecking {
+    height: auto;
+    width: 75%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.singlePackageCheckingPartOne, .singlePackageCheckingPartTwo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 110vh;
+    z-index: 1;
+}
+
+.singlePackageCheckingInfo {
+    width: 100%;
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.singlePackageCheckingInfoMain {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 7rem;
+}
+
+.packageTitle {
+    color: var(--h3-clr);
+    font-size: 3rem;
+    text-transform: capitalize;
+}
+
+.packagePrice, .packageInfoLabel {
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: var(--logo-clr);
+    width: 30%;
+}
+
+.packageDescription, .packageInfoText, .gallerySectionDescription {
+    color: var(--p-clr);
+    font-size: 1.4rem;
+    margin-top: 2rem;
+}
+
+.gallerySectionDescription {
+    margin-top: 0;
+}
+
+.packageInfoText {
+    margin-top: 0;
+}
+
+.singlePackageCheckingInfoDetailed {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    width: 100%;
+    margin-top: 5rem;
+}
+
+.singlePackageCheckingInfoDetailedParts {
+    display: flex;
+    align-items: center;
+    gap: 10rem;
+    width: 100%;
+}
+
+.packageInfoLabel {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.singlePackageCheckingPartTwo {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.gallerySectionTitle {
+    font-size: 3rem;
+    color: var(--h2-clr);
+    font-weight: 550;
+    text-transform: capitalize;
+    width: 70%;
+}
+
+.gallerySectionDescription {
+    font-size: 1.2rem;
+}
+
+.tripGalleryPictures {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+}
+
+.galleryPicture {
+    height: 45%;
+    width: 30%;
+}
+
+.packagesCheckingFormPart {
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 10rem;
+}
+
+.packagesCheckingForm {
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: var(--second-bg-clr);
+    padding: 1.5rem;
+}
+
+.packagesCheckingFormTitle {
+    font-size: 3rem;
+    color: var(--h2-clr);
+    font-weight: 550;
+    text-transform: capitalize;
+    width: 70%;
+}
+
+.packagesCheckingFormDescription {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 80%;
+}
+
+.packagesCheckingFormInput {
+    border: none;
+    padding: 0 2rem;
+    width: 100%;
+    height: 7vh;
+    font-size: 1.2rem;
+}
+
+.packagesCheckingFormButton {
+    width: 50%;
+    padding: 1rem;
+    color: var(--h1-clr);
+    background-color: var(--logo-clr);
+    border: none;
+    border-radius: 7%;
+    font-weight: 700;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.partTwoImage {
+    align-self: flex-end;
+}

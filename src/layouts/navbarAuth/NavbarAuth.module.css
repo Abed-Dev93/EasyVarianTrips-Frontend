@@ -1,0 +1,15 @@
+.headerContainer {
+    width: 50vw;
+    height: 30vh;
+    margin-top: 5rem;
+}
+
+.headerHeroSectionTitle {
+    font-size: 3rem;
+    font-weight: 700;
+    height: 90%;
+    color: var(--h1-clr);
+    text-transform: uppercase;
+    margin-top: 4rem;
+    margin-left: 2rem;
+}
