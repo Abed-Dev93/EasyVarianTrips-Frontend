@@ -29,6 +29,19 @@
     text-decoration: none;
 }
 
+.navItemLogout {
+    color: var(--h1-clr);
+    cursor: pointer;
+    font-weight: 500;
+    padding: 0.2rem;
+    font-size: 1.1rem;
+    transition: border-bottom 0.3s ease;
+    text-decoration: none;
+    background-color: var(--logo-clr);
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
 ul li {
     list-style-type: none;
 }
