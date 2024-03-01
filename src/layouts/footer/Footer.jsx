@@ -1,7 +1,7 @@
 import React from 'react'
 import style from './Footer.module.css'
 import logoFooter from '../../assets/commons/logo-footer.svg'
-import footer from '../../assets/homepage/footer.svg'
+import footer from '../../assets/homepage/footer.png'
 import { FaLinkedinIn } from "react-icons/fa6"
 import { FaFacebookMessenger, FaTwitter, FaInfinity } from "react-icons/fa"
 

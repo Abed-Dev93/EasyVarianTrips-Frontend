@@ -18,7 +18,7 @@
 .secondHeroSection {
     width: 100vw;
     height: 40vh;
-    background: url('/home/abed/Desktop/Senior-Project/Frontend/src/assets/homepage/liberty.svg');
+    background: url('/home/abed/Desktop/Senior-Project/Frontend/src/assets/homepage/liberty.png');
     background-repeat: no-repeat;
     background-size: cover;
     display: inherit;
@@ -54,11 +54,11 @@
 }
 
 .thirdHeroSectionPartOne {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/home/abed/Desktop/Senior-Project/Frontend/src/assets/homepage/nature.svg');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/home/abed/Desktop/Senior-Project/Frontend/src/assets/homepage/nature.png');
 }
 
 .thirdHeroSectionPartTwo  {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/home/abed/Desktop/Senior-Project/Frontend/src/assets/homepage/cities.svg');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/home/abed/Desktop/Senior-Project/Frontend/src/assets/homepage/cities.png');
 }
 
 .thirdHeroSectionSlogan {

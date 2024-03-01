@@ -3,8 +3,8 @@ import style from './ResortBooking.module.css'
 import destination from '../../assets/homepage/destination.svg'
 import comfortableSearch from '../../assets/homepage/comfortable-search.svg'
 import letsGo from '../../assets/homepage/lets-go.svg'
-import plane from '../../assets/homepage/plane.svg'
-import hawai from '../../assets/homepage/hawai.svg'
+import plane from '../../assets/homepage/plane.png'
+import hawai from '../../assets/homepage/hawai.png'
 import { FcStatistics } from "react-icons/fc"
 
 const ResortBooking = () => {

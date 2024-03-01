@@ -1,7 +1,7 @@
 import React from 'react'
 import style from './SinglePackage.module.css'
 import { IoMdInformationCircleOutline } from "react-icons/io"
-import checkpackages2 from '../../assets/rests/checkPackages-2.svg'
+import checkpackages2 from '../../assets/rests/checkPackages-2.png'
 
 const SinglePackage = ({ setIsCardNotClicked }) => {
 

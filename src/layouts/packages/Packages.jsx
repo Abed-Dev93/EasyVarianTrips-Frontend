@@ -1,11 +1,11 @@
 import React from 'react'
 import style from './Packages.module.css'
-import lake from '../../assets/homepage/lake.svg'
-import amazon from '../../assets/homepage/amazon.svg'
-import giza from '../../assets/homepage/giza.svg'
+import lake from '../../assets/homepage/lake.png'
+import amazon from '../../assets/homepage/amazon.png'
+import giza from '../../assets/homepage/giza.png'
 import switzerland from '../../assets/homepage/switzerland.svg'
-import brazil from '../../assets/homepage/brazil.svg'
-import egypt from '../../assets/homepage/egypt.svg'
+import brazil from '../../assets/homepage/brazil.png'
+import egypt from '../../assets/homepage/egypt.png'
 import { CiCalendar } from "react-icons/ci"
 import { IoPersonSharp } from "react-icons/io5"
 import { MdLocationOn } from "react-icons/md"

@@ -1,6 +1,6 @@
 import React from 'react'
 import style from './SightseeingAboutus.module.css'
-import sightseeing from '../../assets/aboutus/sightseeing.svg'
+import sightseeing from '../../assets/aboutus/sightseeing.png'
 
 const SightseeingAboutus = () => {
   return (

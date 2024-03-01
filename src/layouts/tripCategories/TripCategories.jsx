@@ -1,6 +1,6 @@
 import React from 'react'
 import style from './TripCategories.module.css'
-import paris from '../../assets/aboutus/paris.svg'
+import paris from '../../assets/aboutus/paris.png'
 
 const TripCategories = () => {
   return (

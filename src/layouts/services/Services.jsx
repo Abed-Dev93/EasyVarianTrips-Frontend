@@ -1,9 +1,9 @@
 import React from 'react'
 import style from './Services.module.css'
-import tourGuide from '../../assets/homepage/tour-guide.svg'
-import flightOptions from '../../assets/homepage/flight-options.svg'
-import discount from '../../assets/homepage/discount.svg'
-import medicalInsurance from '../../assets/homepage/medical-insurance.svg'
+import tourGuide from '../../assets/homepage/tour-guide.png'
+import flightOptions from '../../assets/homepage/flight-options.png'
+import discount from '../../assets/homepage/discount.png'
+import medicalInsurance from '../../assets/homepage/medical-insurance.png'
 
 const Services = () => {
   return (

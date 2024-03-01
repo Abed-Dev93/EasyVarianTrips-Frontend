@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import style from './Login.module.css'
 import NavbarAuth from '../../layouts/navbarAuth/NavbarAuth'
-import loginSecondary from '../../assets/login/login-secondary.svg'
+import loginSecondary from '../../assets/login/login-secondary.png'
 import logo from '../../assets/commons/logo-footer.svg'
 import { FcGoogle } from "react-icons/fc"
 import axios from 'axios'

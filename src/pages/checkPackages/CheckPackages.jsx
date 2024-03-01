@@ -6,8 +6,8 @@ import { MdOutlineFileDownload, MdOutlineFileUpload, MdOutlineDateRange } from "
 import { PiAirplaneLanding } from "react-icons/pi"
 // import { CiLocationOn } from "react-icons/ci"
 import { BsPeopleFill } from "react-icons/bs"
-import checkpackages2 from '../../assets/rests/checkPackages-2.svg'
-import checkPackages3 from '../../assets/rests/checkPackages-3.svg'
+import checkpackages2 from '../../assets/rests/checkPackages-2.png'
+import checkPackages3 from '../../assets/rests/checkPackages-3.png'
 import SinglePackage from '../../components/singlePackage/SinglePackage'
 
 

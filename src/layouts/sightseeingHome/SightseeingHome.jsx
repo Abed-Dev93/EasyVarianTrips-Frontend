@@ -1,9 +1,9 @@
 import React from 'react'
 import style from './SightseeingHome.module.css'
-import sightseeing1 from '../../assets/homepage/sightseeing-1.svg'
-import sightseeing2 from '../../assets/homepage/sightseeing-2.svg'
-import sightseeing3 from '../../assets/homepage/sightseeing-3.svg'
-import sightseeing4 from '../../assets/homepage/sightseeing-4.svg'
+import sightseeing1 from '../../assets/homepage/sightseeing-1.png'
+import sightseeing2 from '../../assets/homepage/sightseeing-2.png'
+import sightseeing3 from '../../assets/homepage/sightseeing-3.png'
+import sightseeing4 from '../../assets/homepage/sightseeing-4.png'
 
 const SightseeingHome = () => {
   return (
