@@ -1,106 +1,150 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import style from './CheckPackages.module.css'
-import { useNavigate } from 'react-router-dom'
 import NavbarPackages from '../../layouts/navbarPackages/NavbarPackages'
 import { MdOutlineFileDownload, MdOutlineFileUpload, MdOutlineDateRange } from "react-icons/md"
 import { PiAirplaneLanding } from "react-icons/pi"
-// import { CiLocationOn } from "react-icons/ci"
 import { BsPeopleFill } from "react-icons/bs"
 import checkpackages2 from '../../assets/rests/checkPackages-2.png'
 import checkPackages3 from '../../assets/rests/checkPackages-3.png'
 import SinglePackage from '../../components/singlePackage/SinglePackage'
+import axios from 'axios'
+import { useTripContext } from '../../contexts/TripContext'
+import { useNavigate } from 'react-router-dom'
 
 
 const CheckPackages = () => {
 
-  const array = [
-    {
-      avatar: 'https://picsum.photos/seed/picsum/200/300',
-      date: '12, september 2022',
-      people: 120,
-      city: 'berlin',
-      description: 'Qui tempore voluptate qui quia commodi rem praesentium alias et.',
-      price: 1100
-    },
-    {
-      avatar: 'https://picsum.photos/seed/picsum/200/300',
-      date: '12, september 2022',
-      people: 120,
-      city: 'berlin',
-      description: 'Qui tempore voluptate qui quia commodi rem praesentium alias et.',
-      price: 1100
-    },
-    {
-      avatar: 'https://picsum.photos/seed/picsum/200/300',
-      date: '12, september 2022',
-      people: 120,
-      city: 'berlin',
-      description: 'Qui tempore voluptate qui quia commodi rem praesentium alias et.',
-      price: 1100
-    },
-    {
-      avatar: 'https://picsum.photos/seed/picsum/200/300',
-      date: '12, september 2022',
-      people: 120,
-      city: 'berlin',
-      description: 'Qui tempore voluptate qui quia commodi rem praesentium alias et.',
-      price: 1100
-    },
-    {
-      avatar: 'https://picsum.photos/seed/picsum/200/300',
-      date: '12, september 2022',
-      people: 120,
-      city: 'berlin',
-      description: 'Qui tempore voluptate qui quia commodi rem praesentium alias et.',
-      price: 1100
-    },
-    {
-      avatar: 'https://picsum.photos/seed/picsum/200/300',
-      date: '12, september 2022',
-      people: 120,
-      city: 'berlin',
-      description: 'Qui tempore voluptate qui quia commodi rem praesentium alias et.',
-      price: 1100
-    }
-  ]
-
-  const [isCardNotClicked, setIsCardNotClicked] = useState(true)
+  const { trips, pageNumber, setPageNumber, setPageSize } = useTripContext()
   const navigate = useNavigate()
 
-  const handleCardClick = () => {
-    setIsCardNotClicked(false)
+  const [isCardNotClicked, setIsCardNotClicked] = useState(true)
+  const [filterByLow, setFilterByLow] = useState(false)
+  const [filterByHigh, setFilterByHigh] = useState(false)
+  const [filterByTransit, setFilterByTransit] = useState(false)
+  const [tripsFiltered, setTripsFiltered] = useState([])
+
+  const handleCardClick = (trip, id) => {
+    navigate(`/singlePackage/${id}`, { state: { trip } })
   }
+
+  const handleTransitClick = async () => {
+    setFilterByTransit(true)
+    setFilterByLow(false)
+    setFilterByHigh(false)
+    const response = await axios.get(`${process.env.REACT_APP_PATH}/trip/transit`)
+    setTripsFiltered(response.data.Trips)
+  }
+
+  const handleLowClick = async () => {
+    setFilterByTransit(false)
+    setFilterByLow(true)
+    setFilterByHigh(false)
+    const response = await axios.get(`${process.env.REACT_APP_PATH}/trip/lowToHigh`)
+    setTripsFiltered(response.data.Trips)
+  }
+
+  const handleHighClick = async () => {
+    setFilterByTransit(false)
+    setFilterByLow(false)
+    setFilterByHigh(true)
+    const response = await axios.get(`${process.env.REACT_APP_PATH}/trip/highToLow`)
+    setTripsFiltered(response.data.Trips)
+  }
+
+  const handlePageChange = (newPage) => {
+    setPageNumber(newPage)
+}
+
+  useEffect(() => {
+    setPageSize(6)
+}, [])
 
   return (
     <>
       <NavbarPackages />
       <main className={style.packages}>
-        { isCardNotClicked ?<> <section className={style.packagePlanning}>
+        {/* { isCardNotClicked ? */}
+        <> <section className={style.packagePlanning}>
           <article className={style.packageFiltration}>
-            <p className={style.filtrationItem}><MdOutlineFileUpload /> price low to high</p>
-            <p className={style.filtrationItem}><MdOutlineFileDownload /> price high to low</p>
-            <p className={style.filtrationItem}><PiAirplaneLanding /> non-stop</p>
+            <p className={ filterByLow ? style.filtrationItemClicked : style.filtrationItem} onClick={handleLowClick}><MdOutlineFileUpload /> price low to high</p>
+            <p className={ filterByHigh ? style.filtrationItemClicked : style.filtrationItem} onClick={handleHighClick}><MdOutlineFileDownload /> price high to low</p>
+            <p className={ filterByTransit ? style.filtrationItemClicked : style.filtrationItem} onClick={handleTransitClick}><PiAirplaneLanding /> non-stop</p>
           </article>
           <article className={style.packagesChecking}>
             <div className={style.packagesCheckingPartOne}>
               {
-                array.map((item, i) => (
-                  <div className={style.cardTripContainer} key={i} onClick={handleCardClick}>
+                filterByLow === true ?
+                tripsFiltered.map((item, i) => (
+                  <div className={style.cardTripContainer} key={i} onClick={() => handleCardClick(item, item._id)}>
                     <div className={style.cardFirstPart}>
-                      <img src={item.avatar} className={style.cardAvatar} alt='trip' />
+                      <img src={`${process.env.REACT_APP_PATH}/${item.images}`} className={style.cardAvatar} alt='trip' />
                       <div className={style.cardBriefInfo}>
-                        <p className={style.cardBriefInfoText}><MdOutlineDateRange /> {item.date}</p>
-                        <p className={style.cardBriefInfoText}><BsPeopleFill /> {item.people}</p>
+                        <p className={style.cardBriefInfoText}><MdOutlineDateRange /> {item.startDate.slice(0, 10)}</p>
+                        <p className={style.cardBriefInfoText}><BsPeopleFill /> {item.users.length}</p>
                       </div>
                     </div>
                     <div className={style.cardSecondPart}>
-                      <h3 className={style.tripCity}>{item.city}</h3>
-                      <p className={style.tripDescription}>{item.description}</p>
+                      <h3 className={style.tripCity}>{item.toLocation[item.toLocation.length - 1]}</h3>
+                      <p className={style.tripDescription}>{item.shortDescription}</p>
+                      <p className={style.tripPrice}>{item.price} $</p>
+                    </div>
+                  </div>
+                )) :
+                filterByHigh === true ?
+                tripsFiltered.map((item, i) => (
+                  <div className={style.cardTripContainer} key={i} onClick={() => handleCardClick(item, item._id)}>
+                    <div className={style.cardFirstPart}>
+                      <img src={`${process.env.REACT_APP_PATH}/${item.images}`} className={style.cardAvatar} alt='trip' />
+                      <div className={style.cardBriefInfo}>
+                        <p className={style.cardBriefInfoText}><MdOutlineDateRange /> {item.startDate.slice(0, 10)}</p>
+                        <p className={style.cardBriefInfoText}><BsPeopleFill /> {item.users.length}</p>
+                      </div>
+                    </div>
+                    <div className={style.cardSecondPart}>
+                      <h3 className={style.tripCity}>{item.toLocation[item.toLocation.length - 1]}</h3>
+                      <p className={style.tripDescription}>{item.shortDescription}</p>
+                      <p className={style.tripPrice}>{item.price} $</p>
+                    </div>
+                  </div>
+                )) :
+                filterByTransit === true ? 
+                tripsFiltered.map((item, i) => (
+                  <div className={style.cardTripContainer} key={i} onClick={() => handleCardClick(item, item._id)}>
+                    <div className={style.cardFirstPart}>
+                      <img src={`${process.env.REACT_APP_PATH}/${item.images}`} className={style.cardAvatar} alt='trip' />
+                      <div className={style.cardBriefInfo}>
+                        <p className={style.cardBriefInfoText}><MdOutlineDateRange /> {item.startDate.slice(0, 10)}</p>
+                        <p className={style.cardBriefInfoText}><BsPeopleFill /> {item.users.length}</p>
+                      </div>
+                    </div>
+                    <div className={style.cardSecondPart}>
+                      <h3 className={style.tripCity}>{item.toLocation[item.toLocation.length - 1]}</h3>
+                      <p className={style.tripDescription}>{item.shortDescription}</p>
+                      <p className={style.tripPrice}>{item.price} $</p>
+                    </div>
+                  </div>
+                )) :
+                trips.map((item, i) => (
+                  <div className={style.cardTripContainer} key={i} onClick={() => handleCardClick(item, item._id)}>
+                    <div className={style.cardFirstPart}>
+                      <img src={`${process.env.REACT_APP_PATH}/${item.images}`} className={style.cardAvatar} alt='trip' />
+                      <div className={style.cardBriefInfo}>
+                        <p className={style.cardBriefInfoText}><MdOutlineDateRange /> {item.startDate.slice(0, 10)}</p>
+                        <p className={style.cardBriefInfoText}><BsPeopleFill /> {item.users.length}</p>
+                      </div>
+                    </div>
+                    <div className={style.cardSecondPart}>
+                      <h3 className={style.tripCity}>{item.toLocation[item.toLocation.length - 1]}</h3>
+                      <p className={style.tripDescription}>{item.shortDescription}</p>
                       <p className={style.tripPrice}>{item.price} $</p>
                     </div>
                   </div>
                 ))
               }
+              <div className={style.pagination}>
+                <button className={ pageNumber === 1 ? style.packageExploreHidden : style.packageExplore } onClick={() => handlePageChange(pageNumber - 1)}>previous</button>
+                <button className={style.packageExplore} onClick={() => handlePageChange(pageNumber + 1)} disabled={pageNumber === 10}>next</button>
+            </div>
             </div>
             <div className={style.packagesCheckingPartTwo}>
               <form className={style.packagesCheckingForm}>
@@ -119,9 +163,9 @@ const CheckPackages = () => {
             </div>
           </article>
         </section>
-        <img src={checkPackages3} className={ isCardNotClicked === true ? style.externalImage : style.externalImageHidden } alt='external' /> </> :
-        <SinglePackage setIsCardNotClicked={setIsCardNotClicked} />
-        }
+        <img src={checkPackages3} className={ isCardNotClicked === true ? style.externalImage : style.externalImageHidden } alt='external' /> </> 
+        {/* <SinglePackage setIsCardNotClicked={setIsCardNotClicked} />
+        } */}
       </main>
     </>
   )

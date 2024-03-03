@@ -1,3 +1,10 @@
+.package {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    min-height: 180vh;
+}
+
 .packageInfo {
     display: inherit;
     flex-direction: column;
@@ -76,6 +83,7 @@
     font-size: 1.8rem;
     color: var(--logo-clr);
     width: 30%;
+    text-transform: capitalize;
 }
 
 .packageDescription, .packageInfoText, .gallerySectionDescription {
@@ -90,6 +98,7 @@
 
 .packageInfoText {
     margin-top: 0;
+    text-transform: capitalize;
 }
 
 .singlePackageCheckingInfoDetailed {

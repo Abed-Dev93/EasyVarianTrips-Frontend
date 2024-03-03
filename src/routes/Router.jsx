@@ -5,16 +5,18 @@ import Aboutus from '../pages/aboutus/Aboutus'
 import Faqs from '../pages/faqs/Faqs'
 import Login from '../pages/login/Login'
 import CheckPackages from '../pages/checkPackages/CheckPackages'
+import SinglePackage from '../components/singlePackage/SinglePackage'
 import Layout from './Layout'
 
 const Router = () => {
   return (
     <Routes>
       <Route element={<Layout />}>
-        <Route path='/' element={<Home />} />
+        <Route path='/' exact element={<Home />} />
         <Route path='/aboutus' element={<Aboutus />} />
         <Route path='/faqs' element={<Faqs />} />
         <Route path='/packages' element={<CheckPackages />} />
+        <Route path='/singlePackage/:id' element={<SinglePackage />} />
       </Route>
       <Route path='/login' element={<Login />} />
     </Routes>

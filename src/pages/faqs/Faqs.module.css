@@ -35,25 +35,44 @@
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    position: relative;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    height: 3.5rem;
 }
 
 .faqTitle {
     font-size: 1.3rem;
     color: var(--h3-clr);
     text-transform: capitalize;
-    height: 25%;
 }
 
 .faqAnswer {
     color: var(--p-clr);
-    min-height: 0;
-    max-height: 60%;
     font-size: 1.1rem;
     transition: max-height 0.5s ease;
+    transition: all 0.2s ease;
+    width: 100%;
+    bottom: 0;
 }
 
 .faqAnswerNone {
-    display: none;
+    bottom: -15rem;
+}
+
+.faqAnswerNone , .faqAnswer{
+    position: absolute;
+    width: 100%;
+}
+
+.faqOpen{
+    transition: all 0.2s ease-in;
+    height: 8rem;   
+     width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .arrowIcon {

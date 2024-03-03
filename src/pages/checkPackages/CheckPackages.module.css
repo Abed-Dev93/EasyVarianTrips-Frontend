@@ -41,6 +41,15 @@
     color: var(--logo-clr);
 }
 
+.filtrationItemClicked {
+    width: 35%;
+    padding: 2rem;
+    font-size: 1.2rem;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
 .packagesChecking {
     height: auto;
     width: 100%;
@@ -200,5 +209,31 @@
 }
 
 .externalImageHidden {
+    display: none;
+}
+
+.pagination {
+    position: absolute;
+    width: 20%;
+    bottom: -6rem;
+    left: 34rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.packageExplore {
+    width: 30%;
+    padding: 0.8rem;
+    border-radius: 10px;
+    background-color: var(--logo-clr);
+    border: none;
+    color: var(--h1-clr);
+    font-weight: 600;
+    margin-top: 2rem;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.packageExploreHidden {
     display: none;
 }

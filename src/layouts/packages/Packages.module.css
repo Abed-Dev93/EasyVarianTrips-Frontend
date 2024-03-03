@@ -20,6 +20,16 @@
     width: 100%;
     display: flex;
     gap: 6rem;
+    position: relative;
+}
+
+.pagination {
+    position: absolute;
+    width: 20%;
+    bottom: -6rem;
+    left: 34rem;
+    display: flex;
+    gap: 1rem;
 }
 
 .packageCard {
@@ -27,6 +37,13 @@
     flex-direction: column;
     width: 30%;
     position: relative;
+}
+
+.packageCard:hover {
+    border-radius: 10px;
+    transform: scale(1.1);
+    box-shadow: 0 50px 50px rgba(0, 0, 255, 0.2);
+    padding: 1rem;
 }
 
 .packageCardPartTwo {
@@ -48,18 +65,12 @@
 .packageTitle {
     font-size: 2.5rem;
     font-weight: 600;
-}
-
-.packageCountry {
-    position: absolute;
-    height: 8rem;
-    width: 8rem;
-    top: 17.5rem;
-    left: 1rem;
+    text-transform: capitalize;
 }
 
 .packageLocation {
     gap: 0.2rem;
+    text-transform: capitalize;
 }
 
 .packagePrice {
@@ -85,4 +96,9 @@
     font-weight: 600;
     margin-top: 2rem;
     text-transform: capitalize;
+    cursor: pointer;
+}
+
+.packageExploreHidden {
+    display: none;
 }

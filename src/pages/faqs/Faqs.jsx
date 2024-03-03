@@ -52,7 +52,7 @@ const Faqs = () => {
       {
         array.map((item, i) => (
           <section className={style.faqsContainer} key={i}>
-          <article className={style.faq}>
+          <article className={i !== openIndex ? style.faq : style.faqOpen}>
             <h3 className={style.faqTitle}>{item.title}</h3>
             <p className={ i !== openIndex ? style.faqAnswerNone : style.faqAnswer}>{item.answer}</p>
           </article>

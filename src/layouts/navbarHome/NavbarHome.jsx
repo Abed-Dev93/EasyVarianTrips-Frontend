@@ -8,11 +8,13 @@ import turkishAirlines from '../../assets/homepage/turkish-airlines.png'
 import swiss from '../../assets/homepage/swiss.svg'
 import { IoIosAdd } from "react-icons/io"
 import Typed from 'typed.js'
+import axios from 'axios'
 
 const NavbarHome = () => {
 
   const [isOnDashboard, setIsOnDashboard] = useState(false)
   const [isLoggedIn, setIsLoggedIn] = useState(false)
+  const [usersHasPurchased, setUsersHasPurchased] = useState([])
 
   useEffect(() => {
     const options = {
@@ -22,6 +24,12 @@ const NavbarHome = () => {
       showCursor: false
     }
     const typed = new Typed('.staticticsDescriptionTyped', options)
+
+    // const fetchHasPurchased = async () => {
+    //   const response = await axios.get(`${process.env.REACT_APP_PATH}/user/hasPurchased`)
+    //   setUsersHasPurchased(response.data.Users)
+    // }
+    // fetchHasPurchased()
   }, [])
 
   return (
@@ -40,7 +48,7 @@ const NavbarHome = () => {
               <img src='https://picsum.photos/seed/picsum/200/300' className={style.memberAvatar} alt='member' />
               <div className={style.memberAvatarAdd}><IoIosAdd /></div>
             </div>
-            <p className={style.statisticsDescription}>2,500 people booked Trips with EasyVarianTrips</p>
+            <p className={style.statisticsDescription}>{usersHasPurchased.length} people booked Trips with EasyVarianTrips</p>
           </article>
         </section>
       </div>
