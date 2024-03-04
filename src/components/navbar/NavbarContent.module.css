@@ -61,6 +61,31 @@ ul li {
     text-decoration: none;
 }
 
-.active {
-    border-bottom: 3px solid var(--logo-clr);
+.loggedUserInfo {
+    width: 20%;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    margin-left: 15rem;
+}
+
+.userAvatar {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    border: 2px solid var(--h1-clr);
+}
+
+.finalListItem {
+    display: flex;
+    gap: 1rem;
+}
+
+.navItemLogged {
+    font-size: 1.5rem;
+    color: var(--h1-clr);
+    font-weight: 500;
+    padding: 0.2rem;
+    transition: border-bottom 0.3s ease;
+    text-decoration: none;
 }

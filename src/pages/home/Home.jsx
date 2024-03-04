@@ -42,7 +42,7 @@ const Home = () => {
           <article className={style.thirdHeroSectionPartTwo}>
             <p className={style.thirdHeroSectionSlogan}>promotion</p>
             <h2 className={style.thirdHeroSectionTitle}>explore cities</h2>
-            <div className={style.thirdHeroSectionView}>view packages</div>
+            <div className={style.thirdHeroSectionView} onClick={handleClickViewPackages}>view packages</div>
           </article>
         </section>
         <div className={style.homeThirdPart}>

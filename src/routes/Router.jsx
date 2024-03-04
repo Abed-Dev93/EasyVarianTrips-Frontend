@@ -6,6 +6,7 @@ import Faqs from '../pages/faqs/Faqs'
 import Login from '../pages/login/Login'
 import CheckPackages from '../pages/checkPackages/CheckPackages'
 import SinglePackage from '../components/singlePackage/SinglePackage'
+import PackagesController from '../pages/packagesController/PackagesController'
 import Layout from './Layout'
 
 const Router = () => {
@@ -17,6 +18,7 @@ const Router = () => {
         <Route path='/faqs' element={<Faqs />} />
         <Route path='/packages' element={<CheckPackages />} />
         <Route path='/singlePackage/:id' element={<SinglePackage />} />
+        <Route path='/packagesController' element={<PackagesController />} />
       </Route>
       <Route path='/login' element={<Login />} />
     </Routes>

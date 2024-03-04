@@ -1,81 +1,25 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import style from './PackagesAboutus.module.css'
+import { useTripContext } from '../../contexts/TripContext'
 
 const PackagesAboutus = ({ handleClickBackHome }) => {
 
-    const array = [
-        {
-            link: 'https://picsum.photos/seed/picsum/200/300',
-            title: 'anywhere',
-            price: 800
-        },
-        {
-            link: 'https://picsum.photos/seed/picsum/200/300',
-            title: 'anywhere',
-            price: 800
-        },
-        {
-            link: 'https://picsum.photos/seed/picsum/200/300',
-            title: 'anywhere',
-            price: 800
-        },
-        {
-            link: 'https://picsum.photos/seed/picsum/200/300',
-            title: 'anywhere',
-            price: 800
-        },
-        {
-            link: 'https://picsum.photos/seed/picsum/200/300',
-            title: 'anywhere',
-            price: 800
-        },
-        {
-            link: 'https://picsum.photos/seed/picsum/200/300',
-            title: 'anywhere',
-            price: 800
-        },
-        {
-            link: 'https://picsum.photos/seed/picsum/200/300',
-            title: 'anywhere',
-            price: 800
-        },
-        {
-            link: 'https://picsum.photos/seed/picsum/200/300',
-            title: 'anywhere',
-            price: 800
-        },
-        {
-            link: 'https://picsum.photos/seed/picsum/200/300',
-            title: 'anywhere',
-            price: 800
-        },
-        {
-            link: 'https://picsum.photos/seed/picsum/200/300',
-            title: 'anywhere',
-            price: 800
-        },
-        {
-            link: 'https://picsum.photos/seed/picsum/200/300',
-            title: 'anywhere',
-            price: 800
-        },
-        {
-            link: 'https://picsum.photos/seed/picsum/200/300',
-            title: 'anywhere',
-            price: 800
-        }
-    ]
+    const { trips, setPageSize } = useTripContext()
+
+    useEffect(() => {
+        setPageSize(12)
+    })
 
   return (
     <section className={style.aboutusPackagesContainer}>
         <h1 className={style.packagesTitle}>our international packages</h1>
         <article className={style.aboutusPackages}>
             {
-                array.map((item, i) => (
+                trips.map((trip, i) => (
                     <div className={style.packageItem} key={i}>
-                        <img src={item.link} className={style.packagePicture} alt='anywhere' />
-                        <p className={style.packageLocation}>{item.title}</p>
-                        <p className={style.packagePrice}>${item.price}</p>
+                        <img src={`${process.env.REACT_APP_PATH}/${trip.images[0]}`} className={style.packagePicture} alt={trip.toLocation[trip.toLocation.length - 1]} />
+                        <p className={style.packageLocation}>{trip.toLocation[trip.toLocation.length - 1]}</p>
+                        <p className={style.packagePrice}>${trip.price}</p>
                     </div>
                 ))
             }

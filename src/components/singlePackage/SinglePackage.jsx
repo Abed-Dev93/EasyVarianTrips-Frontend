@@ -59,12 +59,6 @@ const SinglePackage = () => {
                   {
                     trip.images.map(image => <img src={`${process.env.REACT_APP_PATH}/${image}`} className={style.galleryPicture} alt='trip' />)
                   }
-                  {/* <img src='https://picsum.photos/seed/picsum/200/300' className={style.galleryPicture} alt='trip' /> */}
-                  {/* <img src='https://picsum.photos/seed/picsum/200/300' className={style.galleryPicture} alt='trip' />
-                  <img src='https://picsum.photos/seed/picsum/200/300' className={style.galleryPicture} alt='trip' />
-                  <img src='https://picsum.photos/seed/picsum/200/300' className={style.galleryPicture} alt='trip' />
-                  <img src='https://picsum.photos/seed/picsum/200/300' className={style.galleryPicture} alt='trip' />
-                  <img src='https://picsum.photos/seed/picsum/200/300' className={style.galleryPicture} alt='trip' /> */}
                 </div>
               </div>
           </article>

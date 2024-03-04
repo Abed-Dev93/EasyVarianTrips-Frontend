@@ -15,7 +15,9 @@ const Packages = () => {
         setPageNumber(newPage)
     }
 
-    setPageSize(3)
+    useEffect(() => {
+        setPageSize(3)
+    })
 
     const handleShowPackage = (trip, id) => {
         navigate(`/singlePackage/${id}`, { state: { trip } })
@@ -28,7 +30,7 @@ const Packages = () => {
             {
                 trips.map((trip) => (
                     <article className={style.packageCard} key={trip._id}>
-                        <img src={`${process.env.REACT_APP_PATH}/${trip.images}`} className={style.packageCardImage} alt={trip.country} />
+                        <img src={`${process.env.REACT_APP_PATH}/${trip.images[0]}`} className={style.packageCardImage} alt={trip.country} />
                         <div className={style.packageCardPartTwo}>
                             <div className={style.partTwoHeader}>
                                 <p className={style.partTwoHeaderOne}>

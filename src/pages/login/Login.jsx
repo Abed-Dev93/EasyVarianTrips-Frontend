@@ -6,6 +6,7 @@ import logo from '../../assets/commons/logo-footer.svg'
 import { FcGoogle } from "react-icons/fc"
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import { useUserContext } from '../../contexts/UserContext'
 
 const Login = () => {
 
@@ -23,6 +24,7 @@ const Login = () => {
     role: ''
   })
   const navigate = useNavigate()
+  const { setIsUserChecked, setUser } = useUserContext()
 
   const handleSwitchFormToRegister = () => {
     setIsOnLoginForm(false)
@@ -51,12 +53,16 @@ const Login = () => {
   const handleSubmitRegister = async (e) => {
     e.preventDefault()
     const response = await axios.post(`${process.env.REACT_APP_PATH}/user/register`, formDataRegister)
+    setIsUserChecked(true)
+    setUser(response.data.data)
     navigate('/')
   }
 
   const handleSubmitLogin = async (e) => {
     e.preventDefault()
     const response = await axios.post(`${process.env.REACT_APP_PATH}/login`, formDataLogin)
+    setIsUserChecked(true)
+    setUser(response.data.data)
     navigate('/')
   }
 
