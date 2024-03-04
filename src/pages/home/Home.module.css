@@ -18,7 +18,7 @@
 .secondHeroSection {
     width: 100vw;
     height: 40vh;
-    background: url('/home/abed/Desktop/Senior-Project/Frontend/src/assets/homepage/liberty.png');
+    background: url('../../assets/homepage/liberty.png');
     background-repeat: no-repeat;
     background-size: cover;
     display: inherit;
