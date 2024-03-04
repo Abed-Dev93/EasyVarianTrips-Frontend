@@ -16,7 +16,7 @@
 .secondHeroSection {
     width: 100vw;
     height: 40vh;
-    background: url('/home/abed/Desktop/Senior-Project/Frontend/src/assets/aboutus/wanderlust.png');
+    background: url('../../assets/aboutus/wanderlust.png');
     background-repeat: no-repeat;
     background-size: cover;
     display: inherit;

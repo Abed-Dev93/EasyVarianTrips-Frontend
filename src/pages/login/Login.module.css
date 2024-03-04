@@ -5,7 +5,7 @@
 }
 
 .loginFirstPart {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/home/abed/Desktop/Senior-Project/Frontend/src/assets/login/auth-picture.png');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/login/auth-picture.png');
     background-repeat: no-repeat;
     background-size: cover;
     display: inherit;

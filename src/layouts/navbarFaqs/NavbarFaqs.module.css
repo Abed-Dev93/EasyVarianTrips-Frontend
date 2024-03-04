@@ -1,7 +1,7 @@
 .headerContainer {
     width: 100vw;
     height: 80vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/home/abed/Desktop/Senior-Project/Frontend/src/assets/rests/faq-navbar.png');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/rests/faq-navbar.png');
     background-repeat: no-repeat;
     background-size: cover;
 }

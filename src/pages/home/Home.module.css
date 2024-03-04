@@ -54,11 +54,11 @@
 }
 
 .thirdHeroSectionPartOne {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/home/abed/Desktop/Senior-Project/Frontend/src/assets/homepage/nature.png');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/homepage/nature.png');
 }
 
 .thirdHeroSectionPartTwo  {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/home/abed/Desktop/Senior-Project/Frontend/src/assets/homepage/cities.png');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/homepage/cities.png');
 }
 
 .thirdHeroSectionSlogan {
