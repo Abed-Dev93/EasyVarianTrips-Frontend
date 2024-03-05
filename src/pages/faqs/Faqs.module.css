@@ -107,3 +107,29 @@
     top: 7rem;
     transform: rotate(15deg);
 }
+
+.pagination {
+    position: absolute;
+    width: 20%;
+    bottom: -6rem;
+    left: 34rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.packageExplore {
+    width: 30%;
+    padding: 0.8rem;
+    border-radius: 10px;
+    background-color: var(--logo-clr);
+    border: none;
+    color: var(--h1-clr);
+    font-weight: 600;
+    margin-top: 2rem;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.packageExploreHidden {
+    display: none;
+}

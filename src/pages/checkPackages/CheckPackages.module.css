@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     position: relative;
-    min-height: 240vh;
+    min-height: 170vh;
 }
 
 .packagePlanning {
@@ -20,7 +20,7 @@
 .packageFiltration {
     display: inherit;
     width: 100%;
-    height: 25vh;
+    height: 10vh;
     background-color: var(--second-bg-clr);
 }
 
@@ -62,13 +62,14 @@
     width: 60%;
     display: flex;
     flex-wrap: wrap;
-    min-height: 240vh;
+    min-height: 100vh;
     z-index: 1;
+    position: relative;
 }
 
 .cardTripContainer {
     width: 50%;
-    height: 65vh;
+    height:50vh;
     display: flex;
     flex-direction: column;
     gap: 0;
@@ -137,6 +138,7 @@
 
 .packagesCheckingPartTwo {
     width: 35%;
+    min-height: 140vh;
     display: flex;
     flex-direction: column;
     gap: 10rem;
@@ -214,8 +216,8 @@
 
 .pagination {
     position: absolute;
-    width: 20%;
-    bottom: -6rem;
+    width: 50%;
+    bottom: -5rem;
     left: 34rem;
     display: flex;
     gap: 1rem;

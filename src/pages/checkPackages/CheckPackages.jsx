@@ -22,6 +22,30 @@ const CheckPackages = () => {
   const [filterByHigh, setFilterByHigh] = useState(false)
   const [filterByTransit, setFilterByTransit] = useState(false)
   const [tripsFiltered, setTripsFiltered] = useState([])
+  const [formData, setFormData] = useState({
+    fromLocation: '',
+    toLocation: '',
+    startDate: '',
+    maxPrice: ''
+  })
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target
+    setFormData({
+      ...formData,
+      [name] : value
+    })
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    try {
+      const response = await axios.get(`${process.env.REACT_APP_PATH}/trip/`)
+    }
+    catch(error) {
+      console.log(error.message)
+    }
+  }
 
   const handleCardClick = (trip, id) => {
     navigate(`/singlePackage/${id}`, { state: { trip } })
@@ -147,15 +171,15 @@ const CheckPackages = () => {
             </div>
             </div>
             <div className={style.packagesCheckingPartTwo}>
-              <form className={style.packagesCheckingForm}>
+              <form className={style.packagesCheckingForm} onSubmit={handleSubmit}>
                 <h2 className={style.packagesCheckingFormTitle}>plan your trip</h2>
                 <p className={style.packagesCheckingFormDescription}>Ex optio sequi et quos praesentium in nostrum labore nam rerum iusto aut magni nesciunt? Quo quidem neque iste expedita est dolo.</p>
                 <div className={style.inputGroup}>
-                  <input type='text' name='from' id='from' placeholder='From City' className={style.packagesCheckingFormInput} />
-                  <input type='text' name='to' id='to' placeholder='To City' className={style.packagesCheckingFormInput} />
-                  <input type='date' name='date' id='date' placeholder='Date' className={style.packagesCheckingFormInput} />
+                  <input type='text' name='from' id='from' placeholder='From City' className={style.packagesCheckingFormInput} value={formData.fromLocation} onChange={handleInputChange} />
+                  <input type='text' name='to' id='to' placeholder='To City' className={style.packagesCheckingFormInput} value={formData.toLocation} onChange={handleInputChange}  />
+                  <input type='date' name='date' id='date' placeholder='Date' className={style.packagesCheckingFormInput} value={formData.startDate} onChange={handleInputChange}  />
                   <h3 className={style.packagesCheckingFormFiltration}>maximum price</h3>
-                  <input type='number' name='max' id='max' placeholder='maximum' className={style.packagesCheckingFormInput} />
+                  <input type='number' name='max' id='max' placeholder='maximum' className={style.packagesCheckingFormInput} value={formData.maxPrice} onChange={handleInputChange}  />
                 </div>
                 <button type='submit' className={style.packagesCheckingFormButton}>Check</button>
               </form>

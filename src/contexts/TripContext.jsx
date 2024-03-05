@@ -6,7 +6,7 @@ const TripContext = createContext()
 export const TripProvider = ({ children }) => {
     const [trips, setTrips] = useState([])
     const [pageNumber, setPageNumber] = useState(1)
-    const [pageSize, setPageSize] = useState(null)
+    const [pageSize, setPageSize] = useState(3 || 6 || 12)
 
     useEffect(() => {
         const fetchTripData = async () => {

@@ -1,79 +1,163 @@
-.footerContainer {
-    margin-top: 10rem;
-    height: 30vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+@media screen and (min-width: 770px) {
+    .footerContainer {
+        margin-top: 10rem;
+        height: 30vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .footerPartOne {
+        width: inherit;
+        height: 80%;
+        width: 75%;
+        margin: 0 auto;
+        display: flex;
+        gap: 15rem;
+    }
+    
+    .footerMain, .footerPlatform, .footerDestinations {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .footerLogo {
+        width: 15rem;
+    }
+    
+    .footerMainDescription {
+        color: #757095;
+        font-size: 1.1rem;
+        width: 90%;
+    }
+    
+    .footerSocialMedia {
+        width: 50%;
+        display: flex;
+        gap: 0.8rem;
+    }
+    
+    .footerSocialMediaIcon {
+        color: var(--logo-clr);
+        font-size: 1.1rem;
+        cursor: pointer;
+    }
+    
+    .footerTitle {
+        font-size: 1.4rem;
+        text-transform: capitalize;
+        color: #181433;
+    }
+    
+    .footerLinksList {
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+    }
+    
+    .footerLinksListItem {
+        list-style-type: none;
+        color: #181433;
+        text-transform: capitalize;
+        opacity: 0.8;
+        cursor: pointer;
+    }
+    
+    .footerPicture {
+        width: 25%;
+        height: 100%;
+    }
+    
+    .footerCopyright {
+        width: 70%;
+        margin: 0 auto;
+        text-align: center;
+        border-top: 1px solid #d7d7d7;
+        padding-top: 1rem;
+        color: #181433;
+    }
 }
 
-.footerPartOne {
-    width: inherit;
-    height: 80%;
-    width: 75%;
-    margin: 0 auto;
-    display: flex;
-    gap: 15rem;
-}
-
-.footerMain, .footerPlatform, .footerDestinations {
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.footerLogo {
-    width: 15rem;
-}
-
-.footerMainDescription {
-    color: #757095;
-    font-size: 1.1rem;
-    width: 90%;
-}
-
-.footerSocialMedia {
-    width: 50%;
-    display: flex;
-    gap: 0.8rem;
-}
-
-.footerSocialMediaIcon {
-    color: var(--logo-clr);
-    font-size: 1.1rem;
-    cursor: pointer;
-}
-
-.footerTitle {
-    font-size: 1.4rem;
-    text-transform: capitalize;
-    color: #181433;
-}
-
-.footerLinksList {
-    display: flex;
-    flex-direction: column;
-    gap: 0.7rem;
-}
-
-.footerLinksListItem {
-    list-style-type: none;
-    color: #181433;
-    text-transform: capitalize;
-    opacity: 0.8;
-    cursor: pointer;
-}
-
-.footerPicture {
-    width: 25%;
-    height: 100%;
-}
-
-.footerCopyright {
-    width: 70%;
-    margin: 0 auto;
-    text-align: center;
-    border-top: 1px solid #d7d7d7;
-    padding-top: 1rem;
-    color: #181433;
+@media screen and (max-width: 769px) {
+    .footerContainer {
+        margin-top: 10rem;
+        height: 30vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .footerPartOne {
+        width: inherit;
+        height: 80%;
+        width: 75%;
+        margin: 0 auto;
+        display: flex;
+        gap: 15rem;
+    }
+    
+    .footerMain, .footerPlatform, .footerDestinations {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .footerLogo {
+        width: 15rem;
+    }
+    
+    .footerMainDescription {
+        color: #757095;
+        font-size: 1.1rem;
+        width: 90%;
+    }
+    
+    .footerSocialMedia {
+        width: 50%;
+        display: flex;
+        gap: 0.8rem;
+    }
+    
+    .footerSocialMediaIcon {
+        color: var(--logo-clr);
+        font-size: 1.1rem;
+        cursor: pointer;
+    }
+    
+    .footerTitle {
+        font-size: 1.4rem;
+        text-transform: capitalize;
+        color: #181433;
+    }
+    
+    .footerLinksList {
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+    }
+    
+    .footerLinksListItem {
+        list-style-type: none;
+        color: #181433;
+        text-transform: capitalize;
+        opacity: 0.8;
+        cursor: pointer;
+    }
+    
+    .footerPicture {
+        width: 25%;
+        height: 100%;
+    }
+    
+    .footerCopyright {
+        width: 70%;
+        margin: 0 auto;
+        text-align: center;
+        border-top: 1px solid #d7d7d7;
+        padding-top: 1rem;
+        color: #181433;
+    }
 }
